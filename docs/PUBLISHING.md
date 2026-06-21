@@ -3,17 +3,17 @@
 PermissionPilot is configured for Maven publishing with these coordinates:
 
 ```text
-com.vyvien.permissionpilot:permissionpilot-core:0.1.0
-com.vyvien.permissionpilot:permissionpilot-compose:0.1.0
-com.vyvien.permissionpilot:permissionpilot-test:0.1.0
+io.github.huongstienstra.permissionpilot:permissionpilot-core:0.1.0
+io.github.huongstienstra.permissionpilot:permissionpilot-compose:0.1.0
+io.github.huongstienstra.permissionpilot:permissionpilot-test:0.1.0
 ```
 
 ## One-time Maven Central setup
 
 1. Create a Central Portal account at `https://central.sonatype.com`.
-2. Register or claim a namespace for `com.vyvien.permissionpilot`.
+2. Register or claim a namespace for `io.github.huongstienstra`.
    - Maven Central requires namespace ownership.
-   - If `com.vyvien` is not available to verify, use a namespace you can prove, such as `io.github.huongstienstra`, and update `GROUP` plus module coordinates.
+   - Use the GitHub repository verification flow for the `huongstienstra` account.
 3. Generate a Central Portal user token.
 4. Create a GPG key for artifact signing.
 5. Export the private signing key for Gradle:
@@ -77,8 +77,8 @@ Run the workflow from GitHub Actions. Leave `release=false` to upload and review
 
 ```kotlin
 dependencies {
-    implementation("com.vyvien.permissionpilot:permissionpilot-core:0.1.0")
-    implementation("com.vyvien.permissionpilot:permissionpilot-compose:0.1.0")
-    testImplementation("com.vyvien.permissionpilot:permissionpilot-test:0.1.0")
+    implementation("io.github.huongstienstra.permissionpilot:permissionpilot-core:0.1.0")
+    implementation("io.github.huongstienstra.permissionpilot:permissionpilot-compose:0.1.0")
+    testImplementation("io.github.huongstienstra.permissionpilot:permissionpilot-test:0.1.0")
 }
 ```

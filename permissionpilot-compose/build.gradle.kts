@@ -47,7 +47,7 @@ mavenPublishing {
     )
 
     coordinates(
-        groupId = "com.vyvien.permissionpilot",
+        groupId = "io.github.huongstienstra.permissionpilot",
         artifactId = "permissionpilot-compose",
         version = "0.1.0",
     )

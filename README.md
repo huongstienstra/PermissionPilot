@@ -25,9 +25,9 @@ After the first Maven Central release:
 
 ```kotlin
 dependencies {
-    implementation("com.vyvien.permissionpilot:permissionpilot-core:0.1.0")
-    implementation("com.vyvien.permissionpilot:permissionpilot-compose:0.1.0")
-    testImplementation("com.vyvien.permissionpilot:permissionpilot-test:0.1.0")
+    implementation("io.github.huongstienstra.permissionpilot:permissionpilot-core:0.1.0")
+    implementation("io.github.huongstienstra.permissionpilot:permissionpilot-compose:0.1.0")
+    testImplementation("io.github.huongstienstra.permissionpilot:permissionpilot-test:0.1.0")
 }
 ```
 
