@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "io.github.huongstienstra.permissionpilot.core"
+    namespace = "com.vyvien.permissionpilot.core"
     compileSdk = 36
 
     defaultConfig {
