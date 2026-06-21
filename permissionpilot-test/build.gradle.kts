@@ -1,5 +1,10 @@
+import com.vanniktech.maven.publish.AndroidSingleVariantLibrary
+import com.vanniktech.maven.publish.JavadocJar
+import com.vanniktech.maven.publish.SourcesJar
+
 plugins {
     id("com.android.library")
+    id("com.vanniktech.maven.publish")
     id("org.jetbrains.kotlin.android")
 }
 
@@ -20,4 +25,27 @@ android {
 
 dependencies {
     api(project(":permissionpilot-core"))
+}
+
+mavenPublishing {
+    configure(
+        AndroidSingleVariantLibrary(
+            variant = "release",
+            sourcesJar = SourcesJar.Sources(),
+            javadocJar = JavadocJar.Empty(),
+        ),
+    )
+
+    coordinates(
+        groupId = "com.vyvien.permissionpilot",
+        artifactId = "permissionpilot-test",
+        version = "0.1.0",
+    )
+    publishToMavenCentral()
+    signAllPublications()
+
+    pom {
+        name.set("PermissionPilot Test")
+        description.set("Test fakes for permission-dependent Android app code.")
+    }
 }

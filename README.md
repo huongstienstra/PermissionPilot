@@ -19,6 +19,20 @@ PermissionGate(state = cameraPermission) {
 - `permissionpilot-test`: fake permission controller for tests.
 - `sample`: Compose sample app.
 
+## Gradle Usage
+
+After the first Maven Central release:
+
+```kotlin
+dependencies {
+    implementation("com.vyvien.permissionpilot:permissionpilot-core:0.1.0")
+    implementation("com.vyvien.permissionpilot:permissionpilot-compose:0.1.0")
+    testImplementation("com.vyvien.permissionpilot:permissionpilot-test:0.1.0")
+}
+```
+
+Publishing notes live in [docs/PUBLISHING.md](docs/PUBLISHING.md).
+
 ## Current Scope
 
 PermissionPilot v1 starts with common modern Android permissions:
@@ -30,4 +44,4 @@ PermissionPilot v1 starts with common modern Android permissions:
 - Nearby Bluetooth
 - Photo and video library
 
-Lint checks and publishing automation are planned after the initial API is stable.
+Lint checks are planned after the initial API is stable.
